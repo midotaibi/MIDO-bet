@@ -1,0 +1,20 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const loginForm = document.querySelector(".auth-form");
+
+  if (loginForm) {
+    loginForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const email = loginForm.querySelector("input[type='email']").value;
+      const password = loginForm.querySelector("input[type='password']").value;
+
+      // حساب تجريبي لتسجيل الدخول
+      if (email === "admin@midobet.com" && password === "admin123") {
+        alert("تم تسجيل الدخول بنجاح!");
+        window.location.href = "admin.html";
+      } else {
+        alert("بيانات غير صحيحة.");
+      }
+    });
+  }
+});
